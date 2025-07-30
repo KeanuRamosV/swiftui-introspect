@@ -2,20 +2,23 @@ import SwiftUI
 import SwiftUIIntrospect
 
 struct AppView: View {
+	@State var globalFrame: CGRect?
+	@State var localFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+
     var body: some View {
-        ContentView()
-            #if os(iOS) || os(tvOS) || os(visionOS)
-            .introspect(
-                .window,
-                on: .iOS(.v13, .v14, .v15, .v16, .v17, .v18, .v26), .tvOS(.v13, .v14, .v15, .v16, .v17, .v18, .v26), .visionOS(.v1, .v2, .v26)
-            ) { window in
-                window.backgroundColor = .brown
-            }
-            #elseif os(macOS)
-            .introspect(.window, on: .macOS(.v10_15, .v11, .v12, .v13, .v14, .v15, .v26)) { window in
-                window.backgroundColor = .lightGray
-            }
-            #endif
+		UIKitView()
+			.frame(width: localFrame.width, height: localFrame.height)
+			.modifier(GlobalFrameCalculator(frame: $globalFrame) {
+//				print("Global frame changed:", oldValue as Any, newValue as Any)
+				print($0)
+			})
+			.onAppear {
+				Task {
+					try? await Task.sleep(nanoseconds: NSEC_PER_SEC * 2)
+//					print("Frame: \(String(describing: frame))")
+					localFrame = .init(x: 20, y: 20, width: 20, height: 20)
+				}
+			}
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50556572E3AA65400312263 /* GlobalFrameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50556562E3AA65400312263 /* GlobalFrameCalculator.swift */; };
 		D53071F729983CEF00F1936C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53071F629983CEF00F1936C /* App.swift */; };
 		D53071F929983CEF00F1936C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53071F829983CEF00F1936C /* AppView.swift */; };
 		D5B829752999738200920EBD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B829742999738200920EBD /* Helpers.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D50556562E3AA65400312263 /* GlobalFrameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFrameCalculator.swift; sourceTree = "<group>"; };
 		D53071F329983CEF00F1936C /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53071F629983CEF00F1936C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		D53071F829983CEF00F1936C /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				D530720429983D9300F1936C /* Showcase.entitlements */,
 				D53071F629983CEF00F1936C /* App.swift */,
 				D53071F829983CEF00F1936C /* AppView.swift */,
+				D50556562E3AA65400312263 /* GlobalFrameCalculator.swift */,
 				D5B829742999738200920EBD /* Helpers.swift */,
 			);
 			path = Showcase;
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50556572E3AA65400312263 /* GlobalFrameCalculator.swift in Sources */,
 				D53071F929983CEF00F1936C /* AppView.swift in Sources */,
 				D5B829752999738200920EBD /* Helpers.swift in Sources */,
 				D53071F729983CEF00F1936C /* App.swift in Sources */,
